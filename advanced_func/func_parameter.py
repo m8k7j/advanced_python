@@ -23,7 +23,10 @@ def func_variable(*args):
 def func_variable_key(**kwargs):
     print(kwargs)
 
-
+# how to recognize args or kwargs
+def func_variable_args_key(name, **kwargs):
+    print(name)
+    print(kwargs)
 # *
 def func_name(*, name, age):
     print(name, age)
@@ -42,5 +45,7 @@ if __name__ == '__main__':
 
     func_variable_key(x=1, y=2)
     func_variable_key(**{'a':3,'b':4})
+
+    func_variable_args_key(1,y=2)
 
     func_name(name='terry', age=30)
